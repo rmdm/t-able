@@ -1,0 +1,28 @@
+{
+  "name": "t-able",
+  "version": "0.0.1",
+  "description": "Timeoutable",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive test",
+    "lint": "eslint index.js",
+    "cover": "nyc npm t"
+  },
+  "keywords": [
+    "timeout",
+    "setTimeout",
+    "pure",
+    "decorator"
+  ],
+  "author": "rmdm",
+  "license": "MIT",
+  "dependencies": {
+    "promback": "^0.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "sinon": "^7.1.0"
+  }
+}
