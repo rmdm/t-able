@@ -1,5 +1,5 @@
-t-able
-======
+timeoutable-wrapper
+===================
 
 A wrapper for a potentially long-running task to signal it's timed out. Does not halt the wrapped task, only signals it's timed out (it's your business how to react on the timeout) by throwing `TimeoutError`. Supports both promises and node-style callbacks.
 
@@ -7,7 +7,7 @@ Install
 =======
 
 ```sh
-    npm i --save t-able
+    npm i --save timeoutable-wrapper
 ```
 
 Usage
@@ -15,7 +15,7 @@ Usage
 
 ```javascript
 
-const timeoutable = require('t-able')
+const timeoutable = require('timeoutable-wrapper')
 
 const potentiallyLongRunningTask = function (arg1, arg2) {
     /* some long-running code */
