@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/rmdm/timeoutable-wrapper.svg?branch=master)](https://travis-ci.org/rmdm/timeoutable-wrapper)
+[![Coverage Status](https://coveralls.io/repos/github/rmdm/timeoutable-wrapper/badge.svg?branch=master)](https://coveralls.io/github/rmdm/timeoutable-wrapper?branch=master)
+
 t-able
 ======
 
