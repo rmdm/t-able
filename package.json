@@ -21,6 +21,7 @@
     "promback": "^0.1.5"
   },
   "devDependencies": {
+    "coveralls": "^3.0.2",
     "eslint": "^5.8.0",
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
