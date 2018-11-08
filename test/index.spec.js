@@ -122,6 +122,7 @@ describe('timeoutable', function () {
 
         } catch (err) {
 
+            assert.strictEqual(err.name, 'TimeoutError')
             assert(err instanceof timeoutable.TimeoutError)
             assert.strictEqual(err.message, 'Timeout of 500ms expired.')
         }

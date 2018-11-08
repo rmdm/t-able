@@ -30,7 +30,7 @@ function using (PromiseLib) {
 class TimeoutError extends Error {
     constructor (message) {
         super(message)
-        this.name = 'TimeoutError'
+        Object.defineProperty(this, 'name', { value: 'TimeoutError' })
         Error.captureStackTrace(this, TimeoutError)
     }
 }
