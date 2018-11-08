@@ -36,10 +36,10 @@ const anotherTimeoutableTask = timeoutable(anotherPotentiallyLongRunningTask, 50
 try {
 
     // if task is not completed within 5000 msecs - throw TimeoutError
-    cosnt result = await timeoutableTask(arg1, arg2)
+    const result = await timeoutableTask(arg1, arg2)
 
     // if another task is not called callback within 5000 msecs - throw TimeoutError
-    cosnt result2 = await anotherTimeoutableTask(arg1, arg2)
+    const result2 = await anotherTimeoutableTask(arg1, arg2)
 
 } catch (err) {
     if (err.name === 'TimeoutError') { // or err instanceof timeoutable.TimeoutError
