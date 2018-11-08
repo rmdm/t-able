@@ -19,25 +19,27 @@ Usage
 
 const timeoutable = require('timeoutable-wrapper')
 
-const potentiallyLongRunningTask = function (arg1, arg2) {
+const potentiallyLongRunningTask = async function (arg1, arg2) {
     /* some long-running code */
     return result
 }
 
-/*
 // or, with callback
-const potentiallyLongRunningTask = function (arg1, arg2, cb) {
-    // some long-running code
+const anotherPotentiallyLongRunningTask = function (arg1, arg2, cb) {
+    /* some long-running code */
     cb(null, result)
 }
-*/
 
 const timeoutableTask = timeoutable(potentiallyLongRunningTask, 5000)
+const anotherTimeoutableTask = timeoutable(anotherPotentiallyLongRunningTask, 5000)
 
 try {
 
     // if task is not completed within 5000 msecs - throw TimeoutError
     cosnt result = await timeoutableTask(arg1, arg2)
+
+    // if another task is not called callback within 5000 msecs - throw TimeoutError
+    cosnt result2 = await anotherTimeoutableTask(arg1, arg2)
 
 } catch (err) {
     if (err.name === 'TimeoutError') { // or err instanceof timeoutable.TimeoutError
@@ -46,7 +48,6 @@ try {
         // it's something else
     }
 }
-
 ```
 
 API
@@ -54,6 +55,12 @@ API
 
 #### `timeoutable (fn, ms) -> Function`
 
-#### `timeoutable.TimeoutError`
+Wraps passed function and returns another one, which throws `TimeoutError` when specified `ms` expired before `fn` returned result.
 
 #### `timeoutable.using(PromiseLib) -> timeoutable`
+
+Returns an instance of **timeoutable-wrapper** that uses specified `PromiseLib` to construct and return from the lib.
+
+#### `timeoutable.TimeoutError`
+
+Type for errors thrown on expired timeouts.

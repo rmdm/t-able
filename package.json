@@ -1,7 +1,7 @@
 {
   "name": "timeoutable-wrapper",
-  "version": "0.0.1",
-  "description": "Timeoutable",
+  "version": "0.1.0",
+  "description": "Signals timeout of the wrapped function by throwing TimeoutError",
   "main": "index.js",
   "scripts": {
     "ci": "npm run lint && npm run cover",
@@ -11,10 +11,15 @@
   },
   "keywords": [
     "timeout",
+    "timeoutable",
+    "wrapper",
     "setTimeout",
-    "pure",
     "decorator"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmdm/timeoutable-wrapper.git"
+  },
   "author": "rmdm",
   "license": "MIT",
   "dependencies": {
