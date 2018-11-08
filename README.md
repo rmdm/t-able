@@ -1,5 +1,7 @@
 timeoutable-wrapper
 ===================
+[![Build Status](https://travis-ci.org/rmdm/timeoutable-wrapper.svg?branch=master)](https://travis-ci.org/rmdm/timeoutable-wrapper)
+[![Coverage Status](https://coveralls.io/repos/github/rmdm/timeoutable-wrapper/badge.svg?branch=master)](https://coveralls.io/github/rmdm/timeoutable-wrapper?branch=master)
 
 A wrapper for a potentially long-running task to signal it's timed out. Does not halt the wrapped task, only signals it's timed out (it's your business how to react on the timeout) by throwing `TimeoutError`. Supports both promises and node-style callbacks.
 
