@@ -4,6 +4,7 @@
   "description": "Timeoutable",
   "main": "index.js",
   "scripts": {
+    "ci": "npm run lint && npm run cover",
     "test": "mocha --recursive test",
     "lint": "eslint index.js",
     "cover": "nyc npm t"
