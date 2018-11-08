@@ -59,7 +59,7 @@ Wraps passed function and returns another one, which throws `TimeoutError` when 
 
 #### `timeoutable.using(PromiseLib) -> timeoutable`
 
-Returns an instance of **timeoutable-wrapper** that uses specified `PromiseLib` to construct and return from the lib.
+Returns an instance of **timeoutable-wrapper** that uses specified `PromiseLib` to construct and return promises from the lib.
 
 #### `timeoutable.TimeoutError`
 
