@@ -127,6 +127,20 @@ describe('timeoutable', function () {
             assert.strictEqual(err.message, 'Timeout of 500ms expired.')
         }
     })
+
+    it('passes this reference to the wrapped function', async function () {
+
+        const fn = function (v) { return this.a + v }
+
+        const o = {
+            a: 1000,
+            wrapped: timeoutable(fn, 10),
+        }
+
+        const result = await o.wrapped(111)
+
+        assert.strictEqual(result, 1111)
+    })
 })
 
 function timeout (ms) {

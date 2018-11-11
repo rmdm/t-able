@@ -8,13 +8,16 @@ function using (PromiseLib) {
 
         return function (...args) {
 
+            const that = this
+
             return new PromiseLib(function (resolve, reject) {
 
                 const t = setTimeout(function () {
                     reject(new TimeoutError(`Timeout of ${ms}ms expired.`))
                 }, ms)
 
-                PromiseLib.resolve(pback(fn)(...args))
+                pback(fn)
+                    .apply(that, args)
                     .then(function (result) {
                         clearTimeout(t)
                         resolve(result)
