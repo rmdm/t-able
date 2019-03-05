@@ -1,6 +1,6 @@
 {
   "name": "timeoutable-wrapper",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Signals timeout of the wrapped function by throwing TimeoutError",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "author": "rmdm",
   "license": "MIT",
   "dependencies": {
-    "promback": "^0.1.5"
+    "promback": "^1.0.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.2",
