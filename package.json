@@ -1,6 +1,6 @@
 {
   "name": "timeoutable-wrapper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Signals timeout of the wrapped function by throwing TimeoutError",
   "main": "index.js",
   "scripts": {
